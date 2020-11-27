@@ -1,0 +1,40 @@
+#navbarDropdown:hover
+{
+	color: white;
+	font: #0032CF;
+	transition-duration: 0.3s;
+}
+	
+.dropdown:hover>.dropdown-menu
+{
+	display: block;
+	transition: 0.5s;
+}
+#nav_menus
+{
+	float: left;
+}
+.container
+{
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top: 5px;
+	width: 100%;
+}
+.row
+{
+	width: 100%;
+}
+
+#nav_text
+{
+	color: #a1b2cc;
+}
+#nav_text_active
+{
+	color: #0275d8;
+}
+#nav_text:hover
+{
+	color: #0275d8;
+}

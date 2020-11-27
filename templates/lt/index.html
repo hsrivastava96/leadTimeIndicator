@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+	<html>
+		<title>Lead Time Indicator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'resources/css/bootstrap.min.css' %}" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'resources/css/font-awesome.min.css' %}" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'resources/css/custom_css.css' %}" crossorigin="anonymous">
+	</head>
+	<body class="bg-light" onload="setter('{{ data_Dict | escapejs }}')">
+		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-white shadow">
+			<div class="row">
+				<div class="col-sm-4">
+					<a class="navbar-brand" href="#"><b class="text-primary" style="padding-left: 15px; font-size: 24px;">Lead Time Indicator<span style="font-size: 10px;">v1.0</span></b></a>
+				</div>			
+				<div class=" mr-auto"></div>
+				<div class="col-sm-5">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+						<!-- This Division is to push nav menus to the extreme right  -->
+						<div class=" mr-auto"></div>
+
+						<ul class="navbar-nav" id="nav_menus" style="padding-right: 15px; margin-top: 10px;">
+							<li class="nav-item" id="nav_home" style="padding-right: 15px;">
+								<a class="nav-link" href="{% url 'index' %}"><h6 id="nav_text_active" style="font-size: 11px;">HOME</h6></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>	
+
+		<div class="row justify-content-md-center card shadow" id="row_id" align="center" style="margin-top: 40px; margin-left: 400px; width: 50%;">
+		</div>
+
+		<table id="tempTable" hidden="true"></table>
+
+		<script src="{% static 'resources/js/jquery-3.3.1.slim.min.js' %}" crossorigin="anonymous"></script>
+		<script src="{% static 'resources/js/popper.min.js' %}" crossorigin="anonymous"></script>
+		<script src="{% static 'resources/js/bootstrap.min.js' %}" crossorigin="anonymous"></script>	
+	</body>
+</html>
+
+<script src="{% static 'resources/js/jspdf.min.js' %}"></script>
+<script src="{% static 'resources/js/custom_3.js' %}"></script>
